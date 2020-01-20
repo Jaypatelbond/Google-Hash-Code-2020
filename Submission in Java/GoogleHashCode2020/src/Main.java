@@ -3,9 +3,13 @@ import sun.nio.cs.ext.MacArabic;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Arrays;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Jaypatelbond
@@ -21,17 +25,18 @@ public class Main {
     // possible with array elements from 0 to i.
     public static boolean[][] array2D;
 
-    static void createOutputFile(ArrayList<Integer> v) {
-//        System.out.println("v = " + v);
-//        int sum = 0;
-//        for( int num : v) {
-//            sum += num;
-//        }
+    static void createOutputFile(Set<Integer> v) {
+        System.out.println("v = " + v);
+        int sum = 0;
+        for( int num : v) {
+            sum += num;
+        }
+        System.out.println("v = " + sum);
         // Create output file.
         String outputFile = "src/Output Files/";
         String list = Arrays.toString(v.toArray()).replace("[", "").replace("]", "").replace(",", "");
         System.out.println("v = " + list);
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFile, "a_example.out"))) {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFile, "b_small.out"))) {
             for (int i = 0; i < 1; i++) {
                 writer.write("" + v.size());
             }
@@ -47,7 +52,7 @@ public class Main {
 
     // A recursive function to print all subsets with the
     // help of array2D[][]. Vector p[] stores current subset.
-    static void printSubsetRecursion(int[] arr, int i, int sum, ArrayList<Integer> p) {
+    static void printSubsetRecursion(int[] arr, int i, int sum, Set<Integer> p) {
 
         // If we reached end and sum is non-zero. We print
         // p[] only if arr[0] is equal to sum OR array2D[0][sum]
@@ -69,7 +74,7 @@ public class Main {
         // If given sum can be achieved after ignoring
         // current element.
         if (array2D[i - 1][sum]) {
-            ArrayList<Integer> b = new ArrayList<>(p);
+            Set<Integer> b = new HashSet<>(p);
             printSubsetRecursion(arr, i - 1, sum, b);
         }
 
@@ -107,13 +112,15 @@ public class Main {
 
         // Now recursively traverse array2D[][] to find all
         // paths from array2D[n-1][sum]
-        ArrayList<Integer> p = new ArrayList<>();
+        Set<Integer> p = new HashSet<Integer>();
         printSubsetRecursion(arr, pizzaType - 1, sum, p);
     }
 
     public static void main(String[] args) throws IOException {
+
+        Instant start = Instant.now();
         //Read Input File.
-        String inputFile = "src/Input Files/a_example";
+        String inputFile = "src/Input Files/b_small";
 
         BufferedReader reader = new BufferedReader(new FileReader(inputFile + ".in"));
 
@@ -132,5 +139,10 @@ public class Main {
             int pizzaType = types.length;
             printAllSubsets(array, pizzaType, maxPizzaSlices);
         }
+
+        Instant finish = Instant.now();
+        System.out.println("Execution time:" + Duration.between(start, finish).getSeconds() + " sec.");
+        System.out.println("Execution time:" + Duration.between(start, finish).toMillis() + " ms.");
+
     }
 }
