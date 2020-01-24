@@ -18,8 +18,8 @@ import java.util.stream.Stream;
  */
 
 public class Main {
-    private static final String inputSource = "src/Input Files/a_example";
-    private static final String outputSource = "src/Output Files/a_example";
+    private static final String inputSource = "src/Input Files/d_quite_big";
+    private static final String outputSource = "src/Output Files/d_quite_big";
     private static final Path inputFile = Paths.get(inputSource + ".in");
     private static final Path outputFile = Paths.get(outputSource + ".out");
 
@@ -80,71 +80,71 @@ public class Main {
             }
         }
         return memo[numberOfElements][maxWeight];
-        }
+    }
 
 
-        private Input readInputSource () {
-            try (BufferedReader reader = Files.newBufferedReader(inputFile, StandardCharsets.UTF_8)) {
-                Main.Input input = new Input();
-                String[] firstLine = reader.readLine().split(" ");
-                input.setMaxSlices(Integer.parseInt(firstLine[0]));
-                input.setTypesofPizza(Integer.parseInt(firstLine[1]));
-                input.setSlices(stringArrayToIntArray(reader.readLine().split(" ")));
-                return input;
+    private Input readInputSource() {
+        try (BufferedReader reader = Files.newBufferedReader(inputFile, StandardCharsets.UTF_8)) {
+            Main.Input input = new Input();
+            String[] firstLine = reader.readLine().split(" ");
+            input.setMaxSlices(Integer.parseInt(firstLine[0]));
+            input.setTypesofPizza(Integer.parseInt(firstLine[1]));
+            input.setSlices(stringArrayToIntArray(reader.readLine().split(" ")));
+            return input;
 
-            } catch (Exception e) {
-                e.printStackTrace();
-                return null;
-            }
-        }
-
-        int[] stringArrayToIntArray (String[]stringArray){
-            return Stream.of(stringArray).mapToInt(Integer::parseInt).toArray();
-        }
-
-        private void writeResultToFile (Set < Integer > result) {
-            StringBuilder outputFileBuilder = new StringBuilder();
-            outputFileBuilder.append(result.size() + "\n");
-            result.forEach(item -> outputFileBuilder.append(item + " "));
-
-            try (BufferedWriter writer = Files.newBufferedWriter(outputFile)) {
-                writer.write(outputFileBuilder.toString());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        private static class Input {
-            private int maxSlices; // Max Weights
-            private int typesofPizza; // Number of Element
-            private int[] slices;  // Weights
-
-            public int getMaxSlices() {
-                return maxSlices;
-            }
-
-            public void setMaxSlices(int maxSlices) {
-                this.maxSlices = maxSlices;
-            }
-
-            public int getTypesofPizza() {
-                return typesofPizza;
-            }
-
-            public void setTypesofPizza(int typesofPizza) {
-                this.typesofPizza = typesofPizza;
-            }
-
-            public int[] getSlices() {
-                return slices;
-            }
-
-            public void setSlices(int[] slices) {
-                this.slices = slices;
-            }
-
-            public void print() {
-                System.out.println("maxSlices = " + maxSlices + "\ntypesofElement = " + typesofPizza + "\nSlices = " + Arrays.toString(slices) + "\n");
-            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
+
+    int[] stringArrayToIntArray(String[] stringArray) {
+        return Stream.of(stringArray).mapToInt(Integer::parseInt).toArray();
+    }
+
+    private void writeResultToFile(Set<Integer> result) {
+        StringBuilder outputFileBuilder = new StringBuilder();
+        outputFileBuilder.append(result.size() + "\n");
+        result.forEach(item -> outputFileBuilder.append(item + " "));
+
+        try (BufferedWriter writer = Files.newBufferedWriter(outputFile)) {
+            writer.write(outputFileBuilder.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static class Input {
+        private int maxSlices; // Max Weights
+        private int typesofPizza; // Number of Element
+        private int[] slices;  // Weights
+
+        public int getMaxSlices() {
+            return maxSlices;
+        }
+
+        public void setMaxSlices(int maxSlices) {
+            this.maxSlices = maxSlices;
+        }
+
+        public int getTypesofPizza() {
+            return typesofPizza;
+        }
+
+        public void setTypesofPizza(int typesofPizza) {
+            this.typesofPizza = typesofPizza;
+        }
+
+        public int[] getSlices() {
+            return slices;
+        }
+
+        public void setSlices(int[] slices) {
+            this.slices = slices;
+        }
+
+        public void print() {
+            System.out.println("maxSlices = " + maxSlices + "\ntypesofElement = " + typesofPizza + "\nSlices = " + Arrays.toString(slices) + "\n");
+        }
+    }
+}

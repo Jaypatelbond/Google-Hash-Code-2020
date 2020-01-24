@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b393605-ae74-46f6-994b-413a739c81e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gc.log" beforeDir="false" afterPath="$PROJECT_DIR$/gc.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GoogleHashCode2020/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GoogleHashCode2020/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GoogleHashCode2020/Output Files/a_example.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GoogleHashCode2020/Output Files/a_example.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GoogleHashCode2020/Output Files/c_medium.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GoogleHashCode2020/Output Files/c_medium.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Output Files/a_example.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Output Files/b_small.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/Output Files/b_small.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Output Files/c_medium.out" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,10 +119,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="322" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579514517613" />
-    <state width="419" height="466" key="DebuggerActiveHint" timestamp="1579776488722">
+    <state width="419" height="466" key="DebuggerActiveHint" timestamp="1579845282242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="419" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1579776488722" />
+    <state width="419" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1579845282242" />
     <state x="147" y="70" key="DiffContextDialog" timestamp="1579514463167">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -136,38 +131,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579514433684" />
-    <state width="1493" height="278" key="GridCell.Tab.0.bottom" timestamp="1579784427446">
+    <state width="1493" height="364" key="GridCell.Tab.0.bottom" timestamp="1579847147762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579784427446" />
-    <state width="1493" height="278" key="GridCell.Tab.0.center" timestamp="1579784427445">
+    <state width="1493" height="364" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579847147762" />
+    <state width="1493" height="364" key="GridCell.Tab.0.center" timestamp="1579847147762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579784427445" />
-    <state width="1493" height="278" key="GridCell.Tab.0.left" timestamp="1579784427445">
+    <state width="1493" height="364" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579847147762" />
+    <state width="1493" height="364" key="GridCell.Tab.0.left" timestamp="1579847147762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579784427445" />
-    <state width="1493" height="278" key="GridCell.Tab.0.right" timestamp="1579784427446">
+    <state width="1493" height="364" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579847147762" />
+    <state width="1493" height="364" key="GridCell.Tab.0.right" timestamp="1579847147762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579784427446" />
-    <state width="1493" height="278" key="GridCell.Tab.1.bottom" timestamp="1579784427446">
+    <state width="1493" height="364" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579847147762" />
+    <state width="1493" height="279" key="GridCell.Tab.1.bottom" timestamp="1579845288644">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579784427446" />
-    <state width="1493" height="278" key="GridCell.Tab.1.center" timestamp="1579784427446">
+    <state width="1493" height="279" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579845288644" />
+    <state width="1493" height="279" key="GridCell.Tab.1.center" timestamp="1579845288643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579784427446" />
-    <state width="1493" height="278" key="GridCell.Tab.1.left" timestamp="1579784427446">
+    <state width="1493" height="279" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579845288643" />
+    <state width="1493" height="279" key="GridCell.Tab.1.left" timestamp="1579845288643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579784427446" />
-    <state width="1493" height="278" key="GridCell.Tab.1.right" timestamp="1579784427446">
+    <state width="1493" height="279" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579845288643" />
+    <state width="1493" height="279" key="GridCell.Tab.1.right" timestamp="1579845288643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="278" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579784427446" />
+    <state width="1493" height="279" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579845288643" />
     <state x="279" y="0" key="SettingsEditor" timestamp="1579782491588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -176,10 +171,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1579673819469" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1579782801797">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1579844785882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579782801797" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579844785882" />
     <state x="209" y="40" key="new project wizard" timestamp="1579504267853">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -196,6 +191,82 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579609212383" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GoogleHashCode2020$Main.ic" NAME="Main Coverage Results" MODIFIED="1579774401781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
