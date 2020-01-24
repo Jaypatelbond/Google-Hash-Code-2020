@@ -8,8 +8,7 @@ count = 0
 ls = []
 
 for i in range(n-1,-1,-1):
-
-    if(sum + m[i] <= max):
+ if(sum + m[i] <= max):
         sum = sum + m[i]
         count += 1
         ls.insert(0,i)
@@ -20,3 +19,4 @@ f.write(str(count)+'\n')
 for i in ls:
     f.write(str(i)+" ")
 f.close
+
