@@ -6,9 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Stream;
 
 /**
@@ -38,30 +36,33 @@ public class Main {
         Main.Input input = readInputSource();
         input.print();
         Set<Integer> result = new HashSet<>();
-        int[][] memo = getMemoMaze(input);
+        Map<Pair<Integer, Integer>, Integer> memo = new HashMap<>();
 
-        System.out.println("Max possible Weight: " + ZeroOneKnapsack(input.getMaxSlices(), input.getTypesofPizza(), input.getSlices(), memo, result));
 
+        System.out.println("Max possible Weight: " + ZeroOneKnapsack(input.getMaxSlices(), input.getTypesofPizza(), input.getSlices(), memo,
+                result));
         System.out.println(Arrays.toString(result.toArray()));
         System.out.println(result.stream().map(index -> input.getSlices()[index]).reduce(Integer::sum));
         writeResultToFile(result);
     }
 
-    private int[][] getMemoMaze(Input input) {
-        int[][] memo = new int[input.getTypesofPizza() + 1][input.getMaxSlices() + 1];
-        for (int j = 0; j <= input.getTypesofPizza(); j++) {
-            Arrays.fill(memo[j], 0, input.getMaxSlices() + 1, -1);
-        }
-        return memo;
-    }
+    /** 0/1 Knapsack method
+     *@param maxWeight - Values stored in array
+     *@param weights - Weights stored in array
+     *@param numberOfElements - number of distinct items
+     *@param result - result stored in a set
+     *@return max value
+     */
 
-    private int ZeroOneKnapsack(int maxWeight, int numberOfElements, int[] weights, int[][] memo, Set<Integer> result) {
+    private int ZeroOneKnapsack(int maxWeight, int numberOfElements, int[] weights, Map<Pair<Integer, Integer>, Integer> memo, Set<Integer> result) {
         if (numberOfElements == 0 || maxWeight == 0) {
             return 0;
         }
-        if (memo[numberOfElements][maxWeight] == -1) {
+        Pair key = new Pair(numberOfElements, maxWeight);
+        System.out.println(String.format("[%d %d]",numberOfElements,maxWeight));
+        if (!memo.containsKey(key)) {
             if (weights[numberOfElements - 1] > maxWeight) {
-                memo[numberOfElements][maxWeight] = ZeroOneKnapsack(maxWeight, numberOfElements - 1, weights, memo, result);
+                memo.put(key, ZeroOneKnapsack(maxWeight, numberOfElements - 1, weights, memo, result));
 
             } else {
                 Set<Integer> resultWithElement = new HashSet<Integer>();
@@ -72,14 +73,14 @@ public class Main {
                 if (weightWithElement >= weightWithoutElement) {
                     result.addAll(resultWithElement);
                     result.add(numberOfElements - 1);
-                    memo[numberOfElements][maxWeight] = weightWithElement;
+                    memo.put(key, weightWithElement);
                 } else {
                     result.addAll(resultWithoutElement);
-                    memo[numberOfElements][maxWeight] = weightWithoutElement;
+                    memo.put(key, weightWithoutElement);
                 }
             }
         }
-        return memo[numberOfElements][maxWeight];
+        return memo.get(key);
     }
 
 
@@ -114,10 +115,16 @@ public class Main {
         }
     }
 
+
+
+
     private static class Input {
         private int maxSlices; // Max Weights
         private int typesofPizza; // Number of Element
         private int[] slices;  // Weights
+
+
+
 
         public int getMaxSlices() {
             return maxSlices;
@@ -145,6 +152,46 @@ public class Main {
 
         public void print() {
             System.out.println("maxSlices = " + maxSlices + "\ntypesofElement = " + typesofPizza + "\nSlices = " + Arrays.toString(slices) + "\n");
+        }
+    }
+
+    private class Pair<K,V>{
+        K key;
+        V value;
+
+        public Pair(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public void setKey(K key) {
+            this.key = key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+
+        public void setValue(V value) {
+            this.value = value;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Pair<?, ?> pair = (Pair<?, ?>) o;
+            return Objects.equals(key, pair.key) &&
+                    Objects.equals(value, pair.value);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(key, value);
         }
     }
 }
